@@ -35,7 +35,7 @@ function App() {
               </div>
             </div>
         </Router>
-    </GithubProvider>
+      </GithubProvider>
   )
     
    
