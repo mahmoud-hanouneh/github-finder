@@ -19,9 +19,10 @@ const UserItem = ({ user: {avatar_url, login} }) => {
 
           <div>
             <h2 className='card-title'>{login}</h2>
+            
             <Link
               className='text-base-content text-opacity-40'
-              to={`https://api.github.com/users${login}`}
+              to={`/user/${login}`}
             >
               Visit Profile
             </Link>
