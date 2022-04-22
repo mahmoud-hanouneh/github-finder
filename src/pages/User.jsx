@@ -5,10 +5,12 @@ import Spinner from '../components/layout/Spinner'
 import RepoList from '../components/repos/RepoList'
 
 import GithubContext from '../context/github/GithubContext'
+import { getUserAndRepos } from '../context/github/GithubActions'
+
 
 function User() {
   
-  const { user, getUser, repos, getRepos, loading } = useContext(GithubContext)
+  const { user, repos, dispatch, loading } = useContext(GithubContext)
   const params = useParams()
 
   const {
@@ -28,9 +30,15 @@ function User() {
     hireable,
     
   } = user
-  useEffect(() => {
-    getUser(params.login)
-    getRepos(params.login)
+
+  useEffect( () => {
+    dispatch({type: 'SET_LOADING'})
+
+    const getUserData = async () => {
+        const userData = await getUserAndRepos(params.login)
+        dispatch({type: 'GET_USER_AND_REPOS', paylod: userData})
+    }
+    getUserData()
   }, [])
 
   if (loading) {
