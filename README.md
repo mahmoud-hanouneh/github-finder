@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [ live URL here]()
+- Live Site URL: [ live URL here](https://mahmoud-github-finder.vercel.app/)
 
 ## My process
 
@@ -50,7 +50,7 @@ Users should be able to:
 
 ### Useful resources - Hooks
 
-- [useState Hook](https://reactjs.org/docs/hooks-state.html) - .
+- [useState Hook](https://reactjs.org/docs/hooks-state.html)
 - [useEffect Hook](https://reactjs.org/docs/hooks-effect.html)
 - [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
 - [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
